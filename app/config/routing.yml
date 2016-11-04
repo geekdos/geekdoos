@@ -10,3 +10,6 @@ geekdoos_user:
     resource: "@GeekdoosUserBundle/Resources/config/routing.yml"
     prefix:   /user
 
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+

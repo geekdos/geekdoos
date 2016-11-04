@@ -18,6 +18,9 @@ class AppKernel extends Kernel
             new Geekdoos\UserBundle\GeekdoosUserBundle(),
             new Geekdoos\BackBundle\GeekdoosBackBundle(),
             new Geekdoos\FrontBundle\GeekdoosFrontBundle(),
+
+            //external Bundles
+            new FOS\UserBundle\FOSUserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
