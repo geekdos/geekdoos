@@ -1,0 +1,12 @@
+geekdoos_front:
+    resource: "@GeekdoosFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+geekdoos_back:
+    resource: "@GeekdoosBackBundle/Resources/config/routing.yml"
+    prefix:   /back
+
+geekdoos_user:
+    resource: "@GeekdoosUserBundle/Resources/config/routing.yml"
+    prefix:   /user
+

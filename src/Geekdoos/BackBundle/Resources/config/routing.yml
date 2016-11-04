@@ -1,0 +1,3 @@
+geekdoos_back_homepage:
+    path:     /
+    defaults: { _controller: GeekdoosBackBundle:Default:index }

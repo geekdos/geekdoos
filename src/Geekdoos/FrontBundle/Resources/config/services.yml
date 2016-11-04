@@ -1,0 +1,4 @@
+services:
+#    geekdoos_front.example:
+#        class: Geekdoos\FrontBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
