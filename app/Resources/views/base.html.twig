@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="GeekDoos web site">
+    <meta name="author" content="KHACHIAI Oussama">
+
+    <!-- Title -->
+    <title>GeekDoos / {% block title %}{% endblock %}</title>
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{{ asset('bundles/geekdoosfront/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/geekdoosfront/vendor/themify-icons/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/geekdoosfront/vendor/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/geekdoosfront/vendor/animate.css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/geekdoosfront/vendor/jscrollpane/jquery.jscrollpane.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/geekdoosfront/vendor/waves/waves.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/geekdoosfront/vendor/switchery/dist/switchery.min.css') }}">
+
+    <!-- Neptune CSS -->
+    <link rel="stylesheet" href="css/{{ asset('bundles/geekdoosfront/css/core.css') }}">
+
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
     <head>
         <meta charset="UTF-8" />
-        <title>GeekDoos / {% block title %}{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
     </head>
     <body>
         <div>
@@ -28,6 +56,21 @@
         {% endif %}
 
         {% block body %}{% endblock %}
+
+        <!-- Vendor JS -->
+        <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/vendor/jquery/jquery-1.12.3.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/vendor/tether/js/tether.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/vendor/detectmobilebrowser/detectmobilebrowser.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/vendor/jscrollpane/jquery.mousewheel.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/vendor/jscrollpane/mwheelIntent.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/vendor/jscrollpane/jquery.jscrollpane.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/vendor/waves/waves.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/vendor/switchery/dist/switchery.min.js') }}"></script>
+
+        <!-- Neptune JS -->
+        <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/js/app.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/js/demo.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
