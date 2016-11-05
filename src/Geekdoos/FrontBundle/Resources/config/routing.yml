@@ -1,3 +1,7 @@
-geekdoos_front_homepage:
+geekdoos_front_landingpage:
     path:     /
+    defaults: { _controller: GeekdoosFrontBundle:Default:landing }
+
+geekdoos_front_homepage:
+    path:     /home
     defaults: { _controller: GeekdoosFrontBundle:Default:index }

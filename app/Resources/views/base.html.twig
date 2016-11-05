@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ asset('bundles/geekdoosfront/vendor/switchery/dist/switchery.min.css') }}">
 
     <!-- Neptune CSS -->
-    <link rel="stylesheet" href="css/{{ asset('bundles/geekdoosfront/css/core.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bundles/geekdoosfront/css/core.css') }}">
 
     {% block stylesheets %}{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -34,7 +34,7 @@
         <meta charset="UTF-8" />
 
     </head>
-    <body>
+    <body class="large-sidebar fixed-sidebar fixed-header">
         <div>
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
@@ -54,9 +54,26 @@
                 {% endfor %}
             {% endfor %}
         {% endif %}
+        <div class="wrapper">
+            {# Preloader #}
+            <div class="preloader"></div>
+            {# Sidebar #}
+            <div class="site-sidebar-overlay"></div>
+            {% include ':Template:nav_sidebare.html.twig' %}
+            {% include ':Template:sidebare_second.html.twig' %}
+            {# End Sidebar #}
+            {% include ':Template:header.html.twig' %}
 
-        {% block body %}{% endblock %}
-
+            <div class="site-content">
+                <!-- Content -->
+                <div class="content-area p-y-1">
+                    <div class="container-fluid">
+                        {% block body %}{% endblock %}
+                    </div>
+                </div>
+                {% include ':Template:footer.html.twig' %}
+            </div>
+        </div>
         <!-- Vendor JS -->
         <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/vendor/jquery/jquery-1.12.3.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/geekdoosfront/vendor/tether/js/tether.min.js') }}"></script>

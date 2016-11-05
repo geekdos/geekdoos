@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('GeekdoosUserBundle:Default:index.html.twig');
+        return $this->render('@GeekdoosFront/Default/index.html.twig');
     }
 }

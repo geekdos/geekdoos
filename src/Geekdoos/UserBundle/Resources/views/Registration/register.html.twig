@@ -1,5 +1,5 @@
-{% extends "FOSUserBundle::layout.html.twig" %}
+{% extends "@GeekdoosUser/sing.html.twig" %}
 {% block title 'Register' %}
-{% block fos_user_content %}
-{% include "FOSUserBundle:Registration:register_content.html.twig" %}
-{% endblock fos_user_content %}
+{% block forms %}
+    {% include "FOSUserBundle:Registration:register_content.html.twig" %}
+{% endblock forms %}
